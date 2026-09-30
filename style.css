@@ -17,18 +17,18 @@ body {
 
 .search-wrapper {
     width: 100%;
-    max-width: 650px;
-    text-align: center; /* This centers everything inside the container horizontally */
+    max-width: 600px;
+    text-align: center;
 }
 
 .logo {
     font-size: 4rem;
     font-weight: 500;
     letter-spacing: -2px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
-/* Coloring letters to mimic a playful search engine logo */
+/* Coloring letters for the MyGoogle logo */
 .logo span:nth-child(1) { color: #4285F4; }
 .logo span:nth-child(2) { color: #EA4335; }
 .logo span:nth-child(3) { color: #FBBC05; }
@@ -38,36 +38,41 @@ body {
 .logo span:nth-child(7) { color: #4285F4; }
 .logo span:nth-child(8) { color: #FBBC05; }
 
-/* Customizing Google's injected search box to look modern, clean, and centered */
+/* Clean up Google's search box container */
 .gsc-control-cse {
     background-color: transparent !important;
     border: none !important;
     padding: 0 !important;
-    margin: 0 auto !important;
 }
 
 .gsc-search-box {
-    margin-bottom: 20px !important;
+    margin-bottom: 0 !important;
 }
 
-input.gsc-input, .gsc-input-box {
+/* Hide the duplicate outer wrapper table Google tries to force in */
+td.gsc-input {
+    padding-right: 0 !important;
+}
+
+.gsc-input-box {
     border-radius: 24px !important;
     border: 1px solid #dfe1e5 !important;
+    background: #fff !important;
     box-shadow: none !important;
-    padding: 10px 15px !important;
     height: 46px !important;
-    font-size: 16px !important;
+    padding: 0 16px !important;
 }
 
-input.gsc-input:focus, .gsc-input-box:focus-within {
+.gsc-input-box:hover, .gsc-input-box:focus-within {
     box-shadow: 0 1px 6px rgba(32,33,36,.28) !important;
     border-color: rgba(223,25,229,0) !important;
 }
 
-.gsc-search-button-v2, .gsc-search-button-v2:hover, .gsc-search-button-v2:focus {
+/* Style the search button to match */
+.gsc-search-button-v2 {
+    border-radius: 24px !important;
+    padding: 10px 20px !important;
     background-color: #4285F4 !important;
-    border-radius: 4px;
-    border-color: #4285F4 !important;
-    margin-left: 10px !important;
-    cursor: pointer;
+    border: none !important;
+    margin-left: 8px !important;
 }
