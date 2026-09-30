@@ -10,14 +10,15 @@ body {
     color: #202124;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 100vh;
-    padding: 20px;
+    padding-top: 15vh;
 }
 
 .search-wrapper {
     width: 100%;
-    max-width: 600px;
+    max-width: 650px;
+    padding: 0 20px;
     text-align: center;
 }
 
@@ -25,10 +26,10 @@ body {
     font-size: 4rem;
     font-weight: 500;
     letter-spacing: -2px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
-/* Coloring letters for the MyGoogle logo */
+/* Coloring letters to mimic a playful search engine logo */
 .logo span:nth-child(1) { color: #4285F4; }
 .logo span:nth-child(2) { color: #EA4335; }
 .logo span:nth-child(3) { color: #FBBC05; }
@@ -38,41 +39,35 @@ body {
 .logo span:nth-child(7) { color: #4285F4; }
 .logo span:nth-child(8) { color: #FBBC05; }
 
-/* Clean up Google's search box container */
+/* Customizing Google's injected search box to look modern and clean */
 .gsc-control-cse {
     background-color: transparent !important;
     border: none !important;
     padding: 0 !important;
 }
 
-.gsc-search-box {
-    margin-bottom: 0 !important;
+.gsc-search-box-tools .gsc-search-box .gsc-input {
+    padding-right: 35px !important;
 }
 
-/* Hide the duplicate outer wrapper table Google tries to force in */
-td.gsc-input {
-    padding-right: 0 !important;
-}
-
-.gsc-input-box {
+input.gsc-input, .gsc-input-box {
     border-radius: 24px !important;
     border: 1px solid #dfe1e5 !important;
-    background: #fff !important;
     box-shadow: none !important;
+    padding: 10px 15px !important;
     height: 46px !important;
-    padding: 0 16px !important;
+    font-size: 16px !important;
 }
 
-.gsc-input-box:hover, .gsc-input-box:focus-within {
+input.gsc-input:focus, .gsc-input-box:focus-within {
     box-shadow: 0 1px 6px rgba(32,33,36,.28) !important;
     border-color: rgba(223,25,229,0) !important;
 }
 
-/* Style the search button to match */
-.gsc-search-button-v2 {
-    border-radius: 24px !important;
-    padding: 10px 20px !important;
+.gsc-search-button-v2, .gsc-search-button-v2:hover, .gsc-search-button-v2:focus {
     background-color: #4285F4 !important;
-    border: none !important;
-    margin-left: 8px !important;
+    border-radius: 4px;
+    border-color: #4285F4 !important;
+    margin-left: 10px !important;
+    cursor: pointer;
 }
